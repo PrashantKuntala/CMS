@@ -1,0 +1,312 @@
+
+/*
+
+author : prashant kumar kuntala
+date   : April 29th, 2015
+
+*/
+
+
+/* color pallete
+#ef5416 #f04848 #2c3e50 #34495e #7f8c8d #95a5a6 
+#bdc3c7 #DC572E #2c3f52 #ed4e6e rgb(204,191,99)
+rgb(4,70,118) rgba(255,255,255,0.7)
+*/
+
+/*check out css tricks for better layout and other ideas*/
+
+/* including  my own fonts */
+
+@font-face
+{
+font-family:Ple;
+src: url(../font/Ple.ttf);
+}
+@font-face
+{
+font-family:dnl;
+src: url(../font/DNL.ttf);
+}
+@font-face
+{
+font-family:Ubuntu;
+src: url(../font/Ubuntu.ttf);
+}
+
+/*my personal styling classes*/
+.myastyle{
+    display: inline;
+     margin: 0 12px;    
+     font-size: 1.5em;
+     color: seashell;
+     padding: 12px;
+     border-bottom: 2px solid orangered;
+     font-family: dnl;
+     background: black;
+     box-shadow: 0px 2px 10px black;
+     cursor: pointer;
+}
+
+.myastyle:hover{
+     display: inline;
+     margin: 0 12px;    
+     font-size: 1.5em;
+     color: seashell;
+     padding: 12px;
+     border-bottom: 2px solid orangered;
+    background: #ef5416;
+    box-shadow: 2px 8px 10px black;
+    -webkit-transition: background-color 0.5s;
+}
+
+.pink{
+    background: #f04848;
+    font-weight: bold;    
+}
+
+.blue{
+    background: #034;
+    color: seashell;
+    font-weight: 400;
+}
+
+/*limited reset*/
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align:baseline;
+	font: inherit;
+}
+
+/*html5 display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+	display: block;
+}
+
+/*general css*/
+
+a{ text-decoration: none;}
+a:visited,a:hover,a{color: white;}
+
+body {
+	font: 100% Cantarell, Arial, Helvetica, sans-serif;
+	line-height: 1.5;	
+	font-weight:normal;
+	font-style:normal;
+    background-image: url(../images/bgtile.jpg);    
+}
+
+section{
+    margin: 20px;
+    padding: 20px; 
+    background: seashell;
+    box-shadow: 0px 0px 5px gray;
+}
+
+/*Main header styles*/
+
+.headersection{
+    background-image: url(../images/rainbow.jpg);     
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height: 400px;
+    margin: 0;
+    box-shadow: 0px 6px 12px black;
+}
+
+.headersection header{
+    text-align: center;    
+}
+
+/*navigation styles*/
+
+.headersection header nav{   
+   padding: 50px;
+}
+
+.headersection h1{
+    font-size: 10em;
+    font-family: Ple;    
+    text-align: center;
+    color: seashell;
+    text-shadow: 2px 5px 30px black;
+}
+
+.headersection h1 span{
+    font-size: 30px;
+    display: block;
+    font-family: ple;    
+    text-align: center;
+    color: seashell;
+    position:relative;
+    top:-60px;
+    text-shadow: 2px 5px 30px black;
+}
+
+/*section styles*/
+
+/*login form styles*/
+.loginform{
+    float: right;      
+}
+
+.loginform h2{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: ple;
+    padding: 10px 20px;    
+}
+
+.loginform p{
+    text-align: center;
+    padding: 6px;
+    margin-top: 12px;
+    font-family: ple;
+    font-size: 30px;
+        
+}
+
+#mail{
+    display: none;    
+}
+
+form{
+    padding: 20px;
+    background: #034;
+}
+
+form input[type=submit]{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 0px;    
+    background: black;
+    outline: none;
+    border:none;
+    border-bottom: 2px solid orangered;
+    background-image: url(../images/right.png);
+    background-size: contain;
+}
+
+.loginform input{
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    outline: none;
+    font-size: 15px;
+    font-family: cursive;
+    text-align: center;    
+}
+
+/*Tools used styles*/
+/*clear this tools at right in the @media for tablet and mobile*/
+.tools,.features{ 
+    overflow: hidden;
+}
+
+.tools div,.features div{
+    padding: 20px;
+    background: #034;
+}
+
+/*you can make this into a class and reuse it many times*/
+.tools div h2,
+.features div h2{
+    display: inline;
+     font-size: 30px;
+     color: seashell;
+    font-weight: 500;
+     padding: 10px;
+     border-bottom: 2px solid orangered;
+    font-family: Ple;
+    background: #f04848;
+}
+
+.toollist{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.toollist li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 10px;    
+}
+
+.toollist li p{
+    padding: 12px;
+    font-size: 40px;
+    font-family: Ple;
+    color: white;
+}
+
+/*featurs section styles*/
+
+.features div h2{
+/*    background:none;*/
+    border: none;
+    display: inline;
+    font-family: ple;
+    color:#fff;
+    font-weight: 500;
+    background: #f04848;
+}
+
+.features div p{
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    color: seashell;
+    font-family: monospace;    
+}
+
+/*footer styles*/
+footer{
+    background-image: url(../images/rainbow.jpg);     
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;      
+     height: 150px;    
+    clear: both;
+}
+
+footer div h3{
+    text-align: center;
+    font-size: 30px;
+    font-family: Ple;
+    color: seashell;
+    margin:12px 0px;
+     text-shadow: 2px 5px 30px black;
+}
+
+footer span{
+    float: right;
+    height: 40px;
+}
+
+footer nav ul li{
+    list-style: none;
+    display: inline;
+}
+
+footer nav ul li a,
+footer nav ul li a:visited,
+footer nav ul li a:hover{
+    color: seashell;
+    cursor: pointer;
+}
+
+footer p{
+    float: right;
+    padding: 10px;
+    font-family: cursive;
+    text-align: center;    
+    background: rgba(255,255,255,0.7);
+    font-size: 15px;
+}

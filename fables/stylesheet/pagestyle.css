@@ -1,0 +1,330 @@
+/*
+
+author : prashant kumar kuntala
+date   : April 29th, 2015
+
+*/
+
+
+/*Header styles*/
+header{
+    background-image: url(../images/rainbow.jpg);     
+  -webkit-background-size: cover;
+/*  -moz-background-size: cover;*/
+  -o-background-size: cover;
+  background-size: cover;
+    margin: 0;
+    box-shadow: 0px 3px 5px black;
+}
+
+header h1{   
+    display: inline-block;
+    font-size: 6em;
+    font-family: Ple;    
+    text-align: center;
+    color: seashell;
+    padding: 20px 30px;
+    text-shadow: 2px 3px 20px black;
+}
+
+header a{
+    font-weight: bold;
+    float: right;
+/* inherits some properties from 
+    demo.css */
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*post styles*/
+article{
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px;
+/*    background: #044;*/
+    background: #034;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px gray;
+    border-bottom: 4px solid #f04848;
+}
+
+.authdate,.ac-authdate{    
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+/*    text-align: right;    */
+}
+
+.authdate span,.ac-authdate span{
+    padding-left: 20px;
+    border-left: 2px solid orangered;
+    font-style: italic;
+    font-size: 18px;
+}
+
+article h2,.ac-container label{
+    font-size: 30px;
+    display: inline-block;
+    font-family: monospace;
+    padding: 10px 20px;
+    background: #f04848;    
+}
+
+article p{
+    line-height: 1.3em;
+    font-size: 20px;
+    padding: 30px;
+    margin-top: 10px;
+    color: seashell;
+/*    font-family: monospace;*/
+    text-align: justify;
+}
+
+.myfoot{
+    background: #034;
+    font-size: 18px;
+    color: seashell;
+    padding: 10px;
+}
+
+.myfoot:hover{
+    background: #f04848;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Accordian styles */
+.ac-container{
+	width: 85%;
+    margin: 20px auto;
+    padding: 20px;
+    background: none;
+}
+.ac-container label{
+	display: block;	
+	cursor: pointer;
+    background: #034;
+    color: seashell;
+    text-shadow: none;
+     position: relative;
+    z-index: 20;    
+}
+.ac-container label:hover{
+	background: #f04848;
+    color: seashell;
+    -webkit-transition: background 0.3s ease-in-out ;
+    text-shadow: none;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+	background: #034; 
+}
+
+.ac-container input{
+	display: none;
+}
+.ac-container article{
+	margin: 0;
+    padding: 0;
+    border: none;
+    margin: 0px auto 5px auto;
+    width: 100%;
+	overflow: hidden;
+	height: 0px;
+    background: seashell;
+	position: relative;
+	z-index: 10;
+	-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+
+.ac-container input:checked ~ article{
+	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+
+.ac-container article p{
+    color: #000;
+}
+
+.ac-container input:checked ~ label h2 {
+    background: #f04848;
+    -webkit-transition: background 0.3s ease-in-out ;    
+    padding:10px;
+}
+/*Have media queries for this height so that you can see all the content*/
+/*the height is must for the animation and also for the proper working*/
+.ac-container input:checked ~ article.ac-height{
+	height: 500px;     
+/*    height: auto;*/
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* explore styles */
+.elist{
+    list-style: none;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+}
+
+.elist li{
+    display: inline-block;
+    background: #034;    
+    margin: 10px;
+    text-align: left;
+    background: seashell;
+    vertical-align:top;  
+	overflow: hidden;
+    width: 400px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.elist li h2{
+    font-size: 30px;    
+    padding: 10px;
+    letter-spacing: 1px;
+    background: #034;
+    overflow: hidden;
+}
+.elist li h2 span{
+    float: right;
+    padding: 5px;
+    background: #f04848;
+}
+.elist li p{
+    color: #000;
+    padding: 20px;
+    font-size: 18px;    
+    line-height: 2em;    
+}
+.elist li p span,.elist li p a{
+    background: #f04848;
+    color: seashell;
+    padding: 6px;
+    font-size: 22px;
+    margin-right: 20px;    
+}
+
+.elist li div p span{
+    background: none;
+    color: #000;
+    padding: 5px;
+    font-size: 20px;    
+}
+.elist li div p{
+    padding: 0;
+    margin: 0 20px;
+}
+.elist li p a{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* media queries for the explore*/
+@media screen and (max-width: 900px) {
+	.elist{
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+    }
+/*
+    .elist li {
+        width: 400px;
+    }
+*/
+    .elist li div p span{
+        border-bottom: 2px solid #034;
+    }
+    .ac-container input:checked ~ article.ac-height{
+/*	height: 800px;     */
+    height: auto;    
+}
+}
+
+@media screen and (max-width: 420px) {
+	
+    .elist{
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+    }
+    .elist li {
+        width: 350px;
+    }
+    .elist li div p span{
+        border-bottom: 2px solid #034;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .elist{
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+    }
+    .elist li {
+        width: 250px;
+    }
+    .elist li div p span{
+        border-bottom: 2px solid #034;
+    }
+    .elist li div p span:after{
+        content:' ';
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*form styles*/
+.fcontatiner{
+    background: seashell;
+    margin: 10px;
+    padding: 2px;
+}
+
+.cpform{
+    margin: 20px;
+    padding: 10px;
+    background: #034;
+    font-family: Ubuntu;
+}
+.cpform ul li {
+    display: inline;
+}
+
+.cpform div textarea{
+    width: 100%;
+    height:60vh;       
+}
+
+.cpform ul li input[type=submit],
+.cpform ul li a,.cpform div input,
+.cpform div textarea,
+.cpform div p{    
+    padding: 10px;
+    font-size: 20px;
+    margin: 12px;
+    outline: none;
+    border: none;
+    font-family: Ubuntu;
+    box-sizing: border-box;
+}
+
+.cpform ul li a, .cpform ul li input{
+    background: #f04848;
+    color: seashell;    
+}
+
+.cpform div{
+    margin: 20px;
+    padding: 10px;
+}
+ 
+.cpform div input{
+    display: block;
+    width: 100%;    
+}

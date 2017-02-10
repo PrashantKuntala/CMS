@@ -1,0 +1,291 @@
+/*
+
+author : prashant kumar kuntala
+date   : April 29th, 2015
+
+*/
+
+@font-face
+{
+font-family:Ple;
+src: url(../font/Ple.ttf);
+}
+@font-face
+{
+font-family:dnl;
+src: url(../font/DNL.ttf);
+}
+
+/*general css*/
+html, body {
+	height:100%;
+}
+body {
+	width: 100%;
+	background: #2c3e50;    
+	overflow: hidden;
+}
+
+/*header styles*/
+#header{
+    z-index: 2000;    
+    position: absolute;
+    width: 100%;    
+     background-image: url(../images/rainbow.jpg);     
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#header h1{
+    float: right;
+	font-size: 5em;
+	font-weight: 400;
+    font-family: Ple;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.9);
+	text-shadow: 2px 5px 15px black;
+	padding: 20px 40px;
+}
+
+/*user styles*/
+#user{
+    padding: 10px;
+}
+#user ul li form,#user ul li form input{
+    cursor: pointer;
+     color: #fff;
+     font-family: dnl;
+     background: black;
+    border: none;
+     font-size: 18px;
+}
+
+#user ul li{
+     display: inline-block;
+    list-style:none;         
+     font-size: 18px;
+     color: #fff;
+    margin: 0px 12px;
+     padding: 12px;
+     border-bottom: 2px solid orangered;
+    cursor: pointer;
+     font-family: dnl;
+     background: black;
+     box-shadow: 0px 2px 10px black;
+}
+
+/*
+#user ul li:hover{
+    display: inline-block;
+     margin: 0px 12px;    
+     font-size: 18px;
+     color: seashell;
+     padding: 12px;
+     border-bottom: 2px solid orangered;
+    background: #ef5416;
+    box-shadow: 2px 8px 10px black;
+    -webkit-transition: background-color 0.5s;
+}
+*/
+
+#user ul #first{
+    background: #ef5416;
+    box-shadow: 2px 8px 10px black;
+    -webkit-transition: background-color 0.5s;
+}
+
+.author{
+    font-family: cursive;
+}
+
+/*navigation styles*/
+#navigation{
+    padding: 20px;
+    list-style:none;
+	z-index:3;
+/*    background: #87cfe6;*/
+    box-shadow: 0px 4px 4px black;
+}
+
+#navigation li{
+    display: inline;
+    margin:5px;
+/*    margin collapse*/
+}
+
+#navigation a{
+	color: #444;
+	background: #fff;
+	background: rgba(255,255,255,0.9);
+	padding: 10px 20px;
+	text-transform: uppercase;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	font-size: 14px;    
+}
+
+#navigation a:hover {
+	background: #ddd;
+}
+
+/*Tab content styles*/
+.content{
+	top: 180px;
+/*    change top value for the tab and mobile; decrese it for the desktop*/
+	position: absolute;   
+    padding: 0px 10px;
+}
+.content h2{
+	font-size: 70px;
+/*	padding: 10px 0px 20px 0px;*/
+	color: #fff;
+	color: rgba(255,255,255,0.9);
+	text-shadow: 0px 4px 2px rgba(0,0,0,0.3);    
+}
+
+.content h2 span{
+    color: white;
+	background: orangered;	
+	padding: 10px;
+	text-transform: uppercase;    
+	box-shadow: 1px 1px 2px black;
+	font-size: 20px;    
+    margin:30px;
+    position: relative;
+    top: -15px;
+    text-shadow: none;
+    cursor: pointer;
+}
+.content p{
+	font-size: 18px;
+	padding: 10px;
+	line-height: 24px;
+    color: #fff;
+	display: inline-block;
+	background: black;
+	padding: 10px;
+	margin: 3px 0px;
+}
+
+
+/*this is the main css that makes everything works*/
+.panel{
+	min-width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	margin-top: -150%;
+	background-color: #2c3e50;
+	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+	opacity: 0;
+	z-index:2;
+	-webkit-transition: opacity .6s ease-in-out;
+	-moz-transition: opacity .6s ease-in-out;
+	-o-transition: opacity .6s ease-in-out;
+	-ms-transition: opacity .6s ease-in-out;
+	transition: opacity .6s ease-in-out;    
+}
+
+.panel:target{
+	opacity: 1;
+	margin-top: 0%;
+}
+
+/*this causes the black color on the selected tab */
+#home:target ~ #header #navigation #link-home,
+#subjects:target ~ #header #navigation #link-subjects,
+#posts:target ~ #header #navigation #link-posts,
+#about:target ~ #header #navigation #link-about,
+#overview:target ~ #header #navigation #link-overview,
+#contact:target ~ #header #navigation #link-contact{
+	background: #000;
+	color: #fff;
+}
+
+/*Overview styles*/
+
+/*these work for tablet size need changes for desktop and mobile*/
+.left{
+    background:seashell;
+    padding: 10px;
+    margin-right: 30px;
+}
+
+.holder{
+    padding: 10px;
+/*    margin: 10px;*/
+}
+
+.holder p{
+    display: block;
+    text-transform: capitalize;    
+    font-family: garamond;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2px 10px;
+}
+
+.holder p span{
+    float: right;
+    padding: 3px 8px;
+}
+
+.holder sup{
+    padding-right: 20px;
+}
+
+.holder p:hover{
+    background:orangered;
+    box-shadow: 0px 2px 3px black;  
+    -webkit-transition: background-color 0.5s;
+}
+
+/*contact form styles*/
+/*
+#form{
+    padding: 12px;
+    font-family: Ubuntu;    
+}
+*/
+
+#form p{
+    color:seashell;
+    background:#f04848;
+    padding:10px;
+    font-size:20px;    
+}
+
+#form input,#form input[type="submit"]{    	
+    font-size: 20px;
+    color: #000;
+    font-family: Ubuntu;
+    border: none;    
+}
+
+#form label{
+	padding-right: 5px;	
+}
+#form input[type="submit"]{
+    color:seashell;
+    background:#f04848;    
+}
+
+/*subjects styles*/
+article{
+    padding: 10px 20px;    
+}
+
+article ul li{display: inline;}
+
+article ul li a{
+    color: white;
+    background: orangered;
+    padding: 10px;
+	margin: 3px 0px;
+}
+
+article ul li a:hover{
+    box-shadow: 0px 0px 8px black;     
+}
